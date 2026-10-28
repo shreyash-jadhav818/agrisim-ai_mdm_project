@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  agrisim:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: agrisim_ai
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:////app/agrisim.db
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+    volumes:
+      - agrisim_data:/app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  agrisim_data:

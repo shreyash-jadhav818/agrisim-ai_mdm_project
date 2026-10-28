@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#08130c] text-slate-100 min-h-screen selection:bg-emerald-600 selection:text-white font-['Plus_Jakarta_Sans',sans-serif];
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #091a10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e3d2b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2b563c;
+}
+
+/* Refined Agricultural Card Styles */
+.agri-card {
+  @apply bg-[#0c1f14]/90 border border-[#1b3d27]/70 rounded-2xl shadow-xl backdrop-blur-md transition-all duration-200;
+}
+
+.agri-card:hover {
+  @apply border-[#245234] shadow-2xl;
+}
+
+.agri-card-elevated {
+  @apply bg-gradient-to-b from-[#11291b] to-[#0c1e13] border border-[#224d31] rounded-2xl shadow-2xl;
+}
+
+.agri-gradient-text {
+  @apply bg-gradient-to-r from-emerald-400 via-green-300 to-lime-300 bg-clip-text text-transparent;
+}
+
+.agri-badge {
+  @apply px-2.5 py-1 rounded-full text-xs font-semibold tracking-wide inline-flex items-center gap-1.5;
+}
+
+.agri-input {
+  @apply w-full bg-[#08150d] border border-[#1d3d28] rounded-xl px-3.5 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors;
+}
+
+.agri-btn-primary {
+  @apply inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-4 py-2.5 rounded-xl shadow-lg shadow-emerald-950/50 hover:shadow-emerald-900/40 transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed text-sm;
+}
+
+.agri-btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 bg-[#122b1c] hover:bg-[#1a3d28] text-emerald-300 hover:text-white border border-[#235033] font-medium px-4 py-2.5 rounded-xl transition-all duration-150 text-sm;
+}
+
